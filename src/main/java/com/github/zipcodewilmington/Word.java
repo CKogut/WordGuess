@@ -10,4 +10,12 @@ public class Word {
         int i = rand.nextInt(4);
         return words[i];
     }
+
+    public static String setDisplay(String word){
+        StringBuilder answer = new StringBuilder();
+        for (int i = 0; i<word.length(); i++){
+            answer.append("_");
+        }
+        return answer.toString();
+    }
 }
