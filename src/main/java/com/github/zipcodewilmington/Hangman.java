@@ -2,6 +2,7 @@ package com.github.zipcodewilmington;
 
 import java.util.Scanner;
 
+
 /**
  * @author xt0fer
  * @version 1.0.0
@@ -13,11 +14,12 @@ public class Hangman {
         Scanner scan = new Scanner(System.in);
 
         //Set the word to guess
-        String targetWord = "Guess";
+        String word = Word.getWord();
+        boolean answered = false;
 
         //Explain the game
         System.out.println("Can you guess what word I'm thinking?");
-        System.out.println("You have " + targetWord.length() + " tries!");
+        System.out.println("You have " + word.length() + " tries!");
 
 
         //While guessesRemain and !answered, ask for a letter
