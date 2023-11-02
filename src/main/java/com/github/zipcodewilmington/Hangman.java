@@ -28,8 +28,8 @@ public class Hangman {
 
         //While guessesRemain and !correct, ask for a letter
         while (!correct && tries > 0) {
-            //Print attempt array here, starts as ____
             System.out.println("You have " + tries + " tries left!");
+            //Print attempt array here, starts as ____, shows letters as they are guessed
             System.out.println(attempt);
             System.out.println("Enter a letter: ");
             char guess = scan.next().charAt(0);
@@ -37,10 +37,7 @@ public class Hangman {
             //check for exit
             if (guess == '-'){ break;}
 
-
-
-            //Compare input to targetWord. If matches, show it to user hangman style.
-            //Ask for next guess
+            //Compare input to targetWord.
             for (int i=0; i < word.length; i++){
                 if (guess == word[i]) {
                     attempt[i] = guess;
@@ -58,7 +55,7 @@ public class Hangman {
 
         }
 
-        //if out of guess, tell them they lost
+        //if out of tries, tell them they lost
         if (!correct){
             System.out.println("You lost!");
         }
