@@ -4,18 +4,18 @@ import java.util.Random;
 
 public class Word {
 
-    public static String getWord (){
+    public static char[] getWord (){
         String[] words = {"cat", "dog", "rabbit", "mouse"};
         Random rand = new Random();
         int i = rand.nextInt(4);
-        return words[i];
+        return words[i].toCharArray();
     }
 
-    public static String setDisplay(String word){
-        StringBuilder answer = new StringBuilder();
-        for (int i = 0; i<word.length(); i++){
-            answer.append("_");
+    public static char[] setDisplay(char [] word){
+        String answer = "";
+        for (int i = 0; i<word.length; i++){
+            answer = answer + "_";
         }
-        return answer.toString();
+        return answer.toCharArray();
     }
 }
