@@ -5,7 +5,7 @@ import java.util.Random;
 public class Word {
 
     public static char[] getWord (){
-        String[] words = {"cat", "dog", "rabbit", "mouse"};
+        String[] words = {"cat", "paper", "rabbit", "mouse"};
         Random rand = new Random();
         int i = rand.nextInt(4);
         return words[i].toCharArray();
